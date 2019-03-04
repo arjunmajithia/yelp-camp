@@ -1,0 +1,34 @@
+<% include ../partials/header %>
+
+<div class="container">
+    
+    <div class="jumbotron mt-3 bg-light">
+        <h3 class="display-4">Welcome to Sports Page</h3>
+        <hr>
+        <p class="lead">
+            This website includes details of all the sports team in the world
+        </p>
+        <a href="/campgrounds/new" class="btn btn-lg btn-primary">Add New Sports Team</a>
+    </div>
+    
+    <div class="row m-3">
+        <% campgrounds.forEach(function(club){ %>
+            <div class="col-lg-3 col-md-6 mb-3">
+                
+                <div class="card border-secondary">
+                    <img src=" <%= club.image %> " class="img-card-top img-fluid p-2">
+                    <div class="card-body">
+                        <h5 class="card-title text-center"><%= club.name %></h5>
+                        <p class="text-center">
+                            <a href="/campgrounds/<%= club._id %>" class="btn btn-primary">Visit <%= club.name %></a>
+                        </p>
+                    </div>
+                </div>    
+                
+            </div>
+        <% }); %>
+    </div>
+    
+</div>
+
+<% include ../partials/footer %>

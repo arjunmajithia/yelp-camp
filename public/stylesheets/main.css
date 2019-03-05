@@ -6,3 +6,19 @@
     display: inline;
 }
 
+#facebook, #instagram, #google {
+    color: white;
+    transition: all 1s;
+}
+
+#facebook:hover {
+    color: 	#3b5998;
+}
+
+#instagram:hover {
+    color: #e95950;
+}
+
+#google:hover {
+    color: #d34836;
+}
